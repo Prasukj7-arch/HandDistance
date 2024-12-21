@@ -93,10 +93,3 @@ while True:
         score = 0
 
 pygame.mixer.quit()
-
-# We see that the hand remains at the same position but the distance between the coordinates will change despite , which shall not happen
-# Thus instead of finding x value , we shall find the diagonal value
-# We want to convert distance values in cm , but another problem we face is to find the polynomial function that can accurately provide us with a cm value for the distance [linear]
-# the accuracy varies on number of camera , also on the size of the hands for which we can add a multiplier or make a separate function for each.
-# We need to delay a little so that a person can see the change in colour , for 1 to 2 iterations we keep the colour same. Delay a little and then change the location
-# Not delay with time , but use counter on basis of how many frames have passed by.
