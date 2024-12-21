@@ -71,6 +71,14 @@ Before setting up the project, ensure you have the following installed:
 - When the player hits the target, the score increases, and the target's position changes.
 - The game runs for a set duration (20 seconds), after which the score is displayed, and the player can restart the game.
 
+## Challenges Faced and Overcome
+
+1. **Changing Coordinates Despite Hand's Static Position**: Initially, the distance between the coordinates changed even though the hand remained stationary. To overcome this, the solution was to calculate the diagonal distance between the hand landmarks instead of relying on individual x or y values.
+
+2. **Distance Conversion to Centimeters**: Converting the distance from pixels to centimeters was challenging due to the variability in camera setups and hand sizes. A polynomial function was used to calibrate the conversion. However, the accuracy varied depending on the camera and hand size. To address this, the possibility of adding a multiplier or creating separate functions for different setups was considered.
+
+3. **Visual Delays for Target Color Change**: The target color changed too quickly for the player to notice. To resolve this, a counter was added to delay the color change for a few frames. Instead of using time-based delays, the system uses frame counters to control when the color change and target relocation occur, providing a more intuitive and engaging experience.
+
 ## Troubleshooting
 
 - **Camera Not Detected**: Ensure your webcam is connected and accessible.
